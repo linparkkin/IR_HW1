@@ -64,6 +64,7 @@ bar([sp_bm25_map_all, sp_bm25_rprec_all, sp_bm25_p10_all]);
 xlabel("Measure")
 ylabel("Precision")
 set(gca,'xticklabel',legend_measure.')
+title("stoplist - porter stemmer - BM25")
 
 %%BM25 without stoplist but with stemmer COMPARISON PLOT
 figure(8)
@@ -71,6 +72,8 @@ bar([np_bm25_map_all, np_bm25_rprec_all, np_bm25_p10_all]);
 xlabel("Measure")
 ylabel("Precision")
 set(gca,'xticklabel',legend_measure.')
+title("no stoplist - porter stemmer - BM25")
+
 
 %%TF*IDF with stoplist and stemmer COMPARISON PLOT
 figure(9)
@@ -78,6 +81,7 @@ bar([sp_tfidf_map_all, sp_tfidf_rprec_all, sp_tfidf_p10_all]);
 xlabel("Measure")
 ylabel("Precision")
 set(gca,'xticklabel',legend_measure.')
+title("stoplist - porter stemmer - TF*IDF")
 
 %%TF*IDF without both stoplist and stemmer COMPARISON PLOT
 figure(10)
@@ -85,3 +89,6 @@ bar([nn_tfidf_map_all, nn_tfidf_rprec_all, nn_tfidf_p10_all]);
 xlabel("Measure")
 ylabel("Precision")
 set(gca,'xticklabel',legend_measure.')
+title("no stoplist - no porter stemmer - TF*IDF")
+
+
