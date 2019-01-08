@@ -35,7 +35,7 @@
 %%% MAP 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 measure=[sp_bm25_map_topics,np_bm25_map_topics,sp_tfidf_map_topics,nn_tfidf_map_topics];
-runID=["stoplist - porter stemmer - BM25","no stoplist - porter stemmer - BM25", "stoplist - porter stemmer - TF*IDF", "no stoplist - no porter stemmer - TF*IDF"];
+runID=["sp-BM25","np-BM25", "sp-TFIDF", "nn-TFIDF"];
 m = mean(measure);
 
 % sort in descending order of mean score
@@ -101,7 +101,7 @@ print(currentFigure, '-djpeg', './Plots/mean-boxplot.jpeg');
 %%% Rprec 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 measure=[sp_bm25_rprec_topics,np_bm25_rprec_topics,sp_tfidf_rprec_topics,nn_tfidf_rprec_topics];
-runID=["stoplist - porter stemmer - BM25","no stoplist - porter stemmer - BM25", "stoplist - porter stemmer - TF*IDF", "no stoplist - no porter stemmer - TF*IDF"];
+runID=["sp-BM25","np-BM25", "sp-TFIDF", "nn-TFIDF"];
 m = mean(measure);
 
 % sort in descending order of mean score
@@ -165,7 +165,7 @@ print(currentFigure, '-djpeg', './Plots/rprec-boxplot.jpeg');
 %%% Precision at 10
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 measure=[sp_bm25_p10_topics,np_bm25_p10_topics,sp_tfidf_p10_topics,nn_tfidf_p10_topics];
-runID=["stoplist - porter stemmer - BM25","no stoplist - porter stemmer - BM25", "stoplist - porter stemmer - TF*IDF", "no stoplist - no porter stemmer - TF*IDF"];
+runID=["sp-BM25","np-BM25", "sp-TFIDF", "nn-TFIDF"];
 m = mean(measure);
 
 % sort in descending order of mean score
