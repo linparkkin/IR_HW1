@@ -4,10 +4,7 @@
 \usepackage{fullpage} % changes the margin
 \usepackage{graphicx}
 \usepackage{hyperref}
-
-\usepackage[
-singlelinecheck=false % <-- important
-]{caption}
+\usepackage{caption}
 
 \begin{document}
 %Header-Make sure you update this information!!!!
@@ -31,24 +28,31 @@ Valutare poi le run calcolando MAP, Rprec e Precision at 10 utilizzando un tool 
 Condurre alla fine il test statistico  ANOVA 1-way per determinare i sistemi appartenenti al ``top group'' sulla base delle diverse misure. 
 
 \section*{Valutazione}
-Prima di tutto è stato utilizzato $terrier$ per effetuare l'indicizzazione dei documenti presenti nella collezione. Per fare ciò è stato modificato il file $terrier.properties$ del tool, cambiando di volta in volta in volta i parametri in base alla run che si era interessati a sviluppare. Va specificato che nella configurazione utilizzata in questo homework sono stati presi in considerazione anche i termini con un basso indice di frequenza, $ignore.low.idf.terms=false$. \\
+
+Prima di tutto è stato utilizzato $terrier$ per effettuare l'indicizzazione dei documenti presenti nella collezione. Per fare ciò è stato modificato il file $terrier.properties$ del tool, cambiando di volta in volta in volta i parametri in base alla run che si era interessati a sviluppare. Va specificato che nella configurazione utilizzata in questo homework sono stati presi in considerazione anche i termini con un basso indice di frequenza, $ignore.low.idf.terms=false$. \\
 Una volta ottenuti i 4 diversi indici è stato possibile valutare le run utilizzando $trec\_eval$ dal terminale, lanciando il comando \texttt{sh trec\_eval.sh -q -m map -m Rprec -m P.10 qrels.trec7.txt}. Non si è tenuto conto della descrizione dei topic settando $TrecQueryTags.skip=DESC,NARR$.
 La seguente tabella riassume i risultati ottenuti.
 
 {%
 \newcommand{\mc}[3]{\multicolumn{#1}{#2}{#3}}
-\begin{center}
+\begin{table}[h]
+\centering
     \begin{tabular}{l|l|l|l|}\cline{2-4}
     & \textbf{map} & \textbf{Rprec} & \textbf{P@10}\\\hline
-    \mc{1}{|l|}{stoplist, porter stemmer, BM25} & 0.1828 & 0.2391 & 0.4180\\\hline
-    \mc{1}{|l|}{no stoplist, porter stemmer, BM25} & 0.1854 & 0.2406 & 0.4300\\\hline
-    \mc{1}{|l|}{stoplist, porter stemmer, TF*IDF} & 0.1821 & 0.2391 & 0.4200\\\hline
-    \mc{1}{|l|}{no stoplist, no porter stemmer, TF*IDF} & 0.1693 & 0.2290 & 0.4060\\\hline
+    \mc{1}{|l|}{\textbf{sp\_BM25}: stoplist, porter stemmer, BM25} & 0.1828 & 0.2391 & 0.4180\\\hline
+    \mc{1}{|l|}{\textbf{np\_BM25}: no stoplist, porter stemmer, BM25} & 0.1854 & 0.2406 & 0.4300\\\hline
+    \mc{1}{|l|}{\textbf{sp\_TFIDF}: stoplist, porter stemmer, TF*IDF} & 0.1821 & 0.2391 & 0.4200\\\hline
+    \mc{1}{|l|}{\textbf{nn\_TFIDF}: no stoplist, no porter stemmer, TF*IDF} & 0.1693 & 0.2290 & 0.4060\\\hline
     \end{tabular}
-\end{center}
+      \caption{Risultati della valutazione.} 
+\end{table}
 }%
+\noindent
+Come si più vedere la run che ha ottenuto i risultati migliori è np\_BM25, con lo score migliore in tutti e tre i criteri di valutazione. Va tuttavia evidenziato come i valori delle quattro diverse run siano molto vicini fra loro, a esclusione di nn\_TFIDF che rappresenta il caso peggiore sia nella Mean Average Precision che nella Recall Precision e Precision at 10.
 
-
+\newpage
+\section*{ANOVA 1-way}
+Lo step finale consiste nella realizzazione del test statistico ANOVA 1-way. A tal fine sono stati sviluppati con Matlab gli scripts $anova.m$, che contiene l'implementazione del test, $parser.m$, realizzato per effettuare il parsing dei risultati forniti da trec\_eval, e $run\_plots.m$, contenente il codice per illustrare i grafici delle diverse run; tutti i file sono disponibili all'interno della repository.  
 
 
 \end{document} 
