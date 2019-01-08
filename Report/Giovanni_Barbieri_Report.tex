@@ -1,0 +1,54 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{fullpage} % changes the margin
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\usepackage[
+singlelinecheck=false % <-- important
+]{caption}
+
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+\large\textbf{Homework 1} \\
+\normalsize \textit{Studente:} Giovanni Barbieri\\
+\textit{Matricola:} 1177495\\
+\textit{Repository:} \url{https://github.com/linparkkin/IR_HW1}
+
+
+\section*{Introduzione}
+Lo svolgimento del seguente homework consiste nell'analisi della collezione sperimentale \textit{TREC7} composta da circa 52800 documenti, 50 topic e un pool con due gradi di rilevanza: R, NR. \\
+L'analisi consiste nell'utilizzo di uno strumento di Information Retrieval, in questo caso \textit{terrier v4.4}, per lo sviluppo di 4 diverse run: 
+\begin{itemize}
+ \item stoplist, porter stemmer, BM25;
+ \item no stoplist, porter stemmer, BM25;
+ \item stoplist, porter stemmer, TF*IDF;
+ \item no stoplist, no porter stemmer, TF*IDF;
+\end{itemize}
+Valutare poi le run calcolando MAP, Rprec e Precision at 10 utilizzando un tool di valutazione, in questo caso \textit{trec\_eval}, già disponibile all'interno di terrier. \\
+Condurre alla fine il test statistico  ANOVA 1-way per determinare i sistemi appartenenti al ``top group'' sulla base delle diverse misure. 
+
+\section*{Valutazione}
+Prima di tutto è stato utilizzato $terrier$ per effetuare l'indicizzazione dei documenti presenti nella collezione. Per fare ciò è stato modificato il file $terrier.properties$ del tool, cambiando di volta in volta in volta i parametri in base alla run che si era interessati a sviluppare. Va specificato che nella configurazione utilizzata in questo homework sono stati presi in considerazione anche i termini con un basso indice di frequenza, $ignore.low.idf.terms=false$. \\
+Una volta ottenuti i 4 diversi indici è stato possibile valutare le run utilizzando $trec\_eval$ dal terminale, lanciando il comando \texttt{sh trec\_eval.sh -q -m map -m Rprec -m P.10 qrels.trec7.txt}. Non si è tenuto conto della descrizione dei topic settando $TrecQueryTags.skip=DESC,NARR$.
+La seguente tabella riassume i risultati ottenuti.
+
+{%
+\newcommand{\mc}[3]{\multicolumn{#1}{#2}{#3}}
+\begin{center}
+    \begin{tabular}{l|l|l|l|}\cline{2-4}
+    & \textbf{map} & \textbf{Rprec} & \textbf{P@10}\\\hline
+    \mc{1}{|l|}{stoplist, porter stemmer, BM25} & 0.1828 & 0.2391 & 0.4180\\\hline
+    \mc{1}{|l|}{no stoplist, porter stemmer, BM25} & 0.1854 & 0.2406 & 0.4300\\\hline
+    \mc{1}{|l|}{stoplist, porter stemmer, TF*IDF} & 0.1821 & 0.2391 & 0.4200\\\hline
+    \mc{1}{|l|}{no stoplist, no porter stemmer, TF*IDF} & 0.1693 & 0.2290 & 0.4060\\\hline
+    \end{tabular}
+\end{center}
+}%
+
+
+
+
+\end{document} 
