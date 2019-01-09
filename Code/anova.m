@@ -29,7 +29,8 @@
 %get the results from the stoplist, porter stemmer, TF*IDF trec_eval file
 [~, sp_tfidf_map_topics, ~, sp_tfidf_rprec_topics, ~, sp_tfidf_p10_topics]=parser('./Results/stoplist_porter_TFIDF/trec_eval_results/stoplist_porter_TFIDF_trec_eval.txt');
 
-
+%increase the line width for a better plotting result
+set(0, 'DefaultLineLineWidth', 2);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% MAP 
@@ -139,6 +140,7 @@ currentFigure.PaperPositionMode = 'auto';
 currentFigure.PaperUnits = 'centimeters';
 currentFigure.PaperSize = [42 22];
 currentFigure.PaperPosition = [1 1 40 20];
+
 
 print(currentFigure, '-djpeg', './Plots/rprec-tukey.jpeg');
 

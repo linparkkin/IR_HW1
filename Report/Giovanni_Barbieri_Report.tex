@@ -54,5 +54,31 @@ Come si più vedere la run che ha ottenuto i risultati migliori è np\_BM25, con
 \section*{ANOVA 1-way}
 Lo step finale consiste nella realizzazione del test statistico ANOVA 1-way. A tal fine sono stati sviluppati con Matlab gli scripts $anova.m$, che contiene l'implementazione del test, $parser.m$, realizzato per effettuare il parsing dei risultati forniti da trec\_eval, e $run\_plots.m$, contenente il codice per illustrare i grafici delle diverse run; tutti i file sono disponibili all'interno della repository.  
 
+\begin{figure}[!htb]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{../Plots/mean-boxplot.jpeg}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{../Plots/rprec-boxplot.jpeg}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{../Plots/p10-boxplot.jpeg}
+\endminipage
+\caption{Boxplot per le 3 diverse misure di precisione}
+\end{figure}
+
+\begin{figure}[!htb]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{../Plots/mean-tukey.jpeg}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{../Plots/rprec-tukey.jpeg}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{../Plots/p10-tukey.jpeg}
+\endminipage
+\caption{Tukey HSD test per le 3 diverse misure di precisione}
+
+\end{figure}
 
 \end{document} 
