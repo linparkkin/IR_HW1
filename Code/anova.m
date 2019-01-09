@@ -30,7 +30,7 @@
 [~, sp_tfidf_map_topics, ~, sp_tfidf_rprec_topics, ~, sp_tfidf_p10_topics]=parser('./Results/stoplist_porter_TFIDF/trec_eval_results/stoplist_porter_TFIDF_trec_eval.txt');
 
 %increase the line width for a better plotting result
-set(0, 'DefaultLineLineWidth', 2);
+set(0, 'DefaultLineLineWidth', 4);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% MAP 
@@ -65,8 +65,8 @@ c_map
 currentFigure = gcf;
 
 ax = gca;
-ax.FontSize = 20;
-ax.XLabel.String = 'Average Precision (AP)';
+ax.FontSize = 22;
+ax.XLabel.String = 'Precision';
 ax.YLabel.String = 'Run';
 ax.Title.String= "Map Measure";
 
@@ -85,8 +85,8 @@ boxplot(measure(:, end:-1:1), 'Labels', runID(end:-1:1), ...
     'Orientation', 'horizontal', 'Notch','off', 'Symbol', 'ro')
 
 ax = gca;
-ax.FontSize = 20;
-ax.XLabel.String = 'Average Precision (AP)';
+ax.FontSize = 22;
+ax.XLabel.String = 'Precision';
 ax.YLabel.String = 'Run';
 ax.Title.String = "Map Measure";
 
@@ -131,8 +131,8 @@ c_rprec
 currentFigure = gcf;
 
 ax = gca;
-ax.FontSize = 20;
-ax.XLabel.String = 'Average Precision (AP)';
+ax.FontSize = 22;
+ax.XLabel.String = 'Precision';
 ax.YLabel.String = 'Run';
 ax.Title.String= "Rprec Measure";
 
@@ -151,8 +151,8 @@ currentFigure = figure;
 boxplot(measure(:, end:-1:1), 'Labels', runID(end:-1:1), ...
     'Orientation', 'horizontal', 'Notch','off', 'Symbol', 'ro')
 ax = gca;
-ax.FontSize = 20;
-ax.XLabel.String = 'Average Precision (AP)';
+ax.FontSize = 22;
+ax.XLabel.String = 'Precision';
 ax.YLabel.String = 'Run';
 ax.Title.String= "Rprec Measure";
    
@@ -196,8 +196,8 @@ c_p10
 currentFigure = gcf;
 
 ax = gca;
-ax.FontSize = 20;
-ax.XLabel.String = 'Average Precision (AP)';
+ax.FontSize = 22;
+ax.XLabel.String = 'Precision';
 ax.YLabel.String = 'Run';
 ax.Title.String="Precision at 10 Measure";
 
@@ -216,8 +216,8 @@ boxplot(measure(:, end:-1:1), 'Labels', runID(end:-1:1), ...
     'Orientation', 'horizontal', 'Notch','off', 'Symbol', 'ro')
 
 ax = gca;
-ax.FontSize = 20;
-ax.XLabel.String = 'Average Precision (AP)';
+ax.FontSize = 22;
+ax.XLabel.String = 'Precision';
 ax.YLabel.String = 'Run';
 ax.Title.String="Precision at 10 Measure";
 

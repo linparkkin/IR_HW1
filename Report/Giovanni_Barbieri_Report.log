@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.30)  9 JAN 2019 12:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.12.30)  9 JAN 2019 13:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -312,45 +312,45 @@ ndo $\OML/cmm/m/it/10.95 TrecQueryTags:skip \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/
 File: ../Plots/mean-boxplot.jpeg Graphic file (type jpg)
 <use ../Plots/mean-boxplot.jpeg>
 Package pdftex.def Info: ../Plots/mean-boxplot.jpeg  used on input line 59.
-(pdftex.def)             Requested size: 144.95303pt x 72.46117pt.
+(pdftex.def)             Requested size: 149.48022pt x 74.74028pt.
 <../Plots/rprec-boxplot.jpeg, id=21, 2370.8575pt x 1185.42876pt>
 File: ../Plots/rprec-boxplot.jpeg Graphic file (type jpg)
 <use ../Plots/rprec-boxplot.jpeg>
 Package pdftex.def Info: ../Plots/rprec-boxplot.jpeg  used on input line 62.
-(pdftex.def)             Requested size: 144.95303pt x 72.46117pt.
+(pdftex.def)             Requested size: 149.48022pt x 74.74028pt.
 <../Plots/p10-boxplot.jpeg, id=22, 2370.8575pt x 1185.42876pt>
 File: ../Plots/p10-boxplot.jpeg Graphic file (type jpg)
 <use ../Plots/p10-boxplot.jpeg>
 Package pdftex.def Info: ../Plots/p10-boxplot.jpeg  used on input line 65.
-(pdftex.def)             Requested size: 144.95303pt x 72.46117pt.
+(pdftex.def)             Requested size: 149.48022pt x 74.74028pt.
 <../Plots/mean-tukey.jpeg, id=23, 2370.8575pt x 1185.42876pt>
 File: ../Plots/mean-tukey.jpeg Graphic file (type jpg)
 <use ../Plots/mean-tukey.jpeg>
 Package pdftex.def Info: ../Plots/mean-tukey.jpeg  used on input line 72.
-(pdftex.def)             Requested size: 144.95303pt x 72.46117pt.
+(pdftex.def)             Requested size: 149.48022pt x 74.74028pt.
 <../Plots/rprec-tukey.jpeg, id=24, 2370.8575pt x 1185.42876pt>
 File: ../Plots/rprec-tukey.jpeg Graphic file (type jpg)
 <use ../Plots/rprec-tukey.jpeg>
 Package pdftex.def Info: ../Plots/rprec-tukey.jpeg  used on input line 75.
-(pdftex.def)             Requested size: 144.95303pt x 72.46117pt.
+(pdftex.def)             Requested size: 149.48022pt x 74.74028pt.
 <../Plots/p10-tukey.jpeg, id=25, 2370.8575pt x 1185.42876pt>
 File: ../Plots/p10-tukey.jpeg Graphic file (type jpg)
 <use ../Plots/p10-tukey.jpeg>
 Package pdftex.def Info: ../Plots/p10-tukey.jpeg  used on input line 78.
-(pdftex.def)             Requested size: 144.95303pt x 72.46117pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 84.
+(pdftex.def)             Requested size: 149.48022pt x 74.74028pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 83.
  [2 <../Plots/mean-boxplot.jpeg> <../Plots/rprec-boxplot.jpeg> <../Plots/p10-bo
 xplot.jpeg> <../Plots/mean-tukey.jpeg> <../Plots/rprec-tukey.jpeg> <../Plots/p1
 0-tukey.jpeg>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 84.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 83.
 
 (./Giovanni_Barbieri_Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 84.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 84.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 83.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 83.
 Package rerunfilecheck Info: File `Giovanni_Barbieri_Report.out' has not change
 d.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 84.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 83.
  ) 
 Here is how much of TeX's memory you used:
  6911 strings out of 492982
@@ -367,7 +367,7 @@ ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Giovanni_Barbieri_Report.pdf (2 pages, 735595 bytes).
+Output written on Giovanni_Barbieri_Report.pdf (2 pages, 751840 bytes).
 PDF statistics:
  60 PDF objects out of 1000 (max. 8388607)
  42 compressed objects within 1 object stream
